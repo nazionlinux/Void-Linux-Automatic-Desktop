@@ -43,6 +43,9 @@ clear
 echo "Installazione XORG & NETWORK MANAGER..."
 sleep 3s
 	sudo xbps-install -Sy nano xorg-minimal xterm xcalc fonts-roboto-ttf ipafont-fonts-otf xf86-input-synaptics NetworkManager network-manager-applet dnsmasq
+	sudo sed '/*.nanorc/s/^#//' -i /etc/nanorc
+	cp /etc/nanorc ~/.nanorc
+	sed '/*.nanorc/s/^#//' -i ~/.nanorc
 
 clear
 
@@ -91,7 +94,6 @@ sleep 10s
 	sudo ln -s /etc/sv/NetworkManager /var/service/
 	sudo ln -s /etc/sv/pipewire /var/service/
 	sudo ln -s /etc/sv/lightdm /var/service/
-	cp /etc/nanorc ~/.nanorc
 
 clear
 
