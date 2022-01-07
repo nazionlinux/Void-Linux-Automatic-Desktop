@@ -46,6 +46,7 @@ sleep 3s
 	sudo sed '/*.nanorc/s/^#//' -i /etc/nanorc
 	cp /etc/nanorc ~/.nanorc
 	sed '/*.nanorc/s/^#//' -i ~/.nanorc
+	sudo echo -e "nameserver 1.1.1.1\nnameserver 1.0.0.1" > /etc/resolvdnsmasq.conf
 
 clear
 
