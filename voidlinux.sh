@@ -42,19 +42,19 @@ clear
 
 echo "Installazione XORG & NETWORK MANAGER..."
 sleep 3s
-	sudo xbps-install -Sy nano xorg-minimal xterm xcalc fonts-roboto-ttf ipafont-fonts-otf NetworkManager network-manager-applet dnsmasq
+	sudo xbps-install -Sy nano xorg-minimal xterm xcalc fonts-roboto-ttf ipafont-fonts-otf xf86-input-synaptics NetworkManager network-manager-applet dnsmasq
 
 clear
 
 echo "Installazione PIPEWIRE & ALSA..."
 sleep 3s
-	sudo xbps-install -Sy pipewire alsa-pipewire alsa-utils
+	sudo xbps-install -Sy pipewire alsa-pipewire alsa-utils rtkit
 
 clear
 
 echo "Installazione LIGHTDM & XFCE..."
 sleep 3s
-	sudo xbps-install -Sy lightdm lightdm-gtk3-greeter sakura xfce4-panel xfce4-settings xfce4-session xfwm4 xfdesktop xfce4-alsa-plugin breeze-icons
+	sudo xbps-install -Sy lightdm lightdm-gtk3-greeter elogind sakura xfce4-panel xfce4-settings xfce4-session xfwm4 xfdesktop xfce4-alsa-plugin breeze-icons
 
 clear
 
@@ -78,7 +78,9 @@ clear
 
 echo "Installazione programmi non free (UNRAR)..."
 sleep 3s
-	sudo xbps-install -Sy void-repo-nonfree unrar
+	sudo xbps-install -Sy void-repo-nonfree
+	sudo xbps-install -Syuv
+	sudo xbps-install -Sy unrar
 
 clear
 
