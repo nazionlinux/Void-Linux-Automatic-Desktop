@@ -43,7 +43,7 @@ clear
 echo "Installazione XORG & NETWORK MANAGER..."
 sleep 3s
 	sudo xbps-install -Sy nano xorg-minimal xterm xcalc fonts-roboto-ttf ipafont-fonts-otf xf86-input-synaptics NetworkManager network-manager-applet dnsmasq
-	cd ~ && wget https://raw.githubusercontent.com/nazionlinux/nanorc/main/.nanorc
+	cd ~ && wget -c https://raw.githubusercontent.com/nazionlinux/nanorc/main/.nanorc
 	#sudo sed '/*.nanorc/s/^#//' -i /etc/nanorc
 	sudo cp ~/.nanorc /etc/nanorc
 	#sed '/*.nanorc/s/^#//' -i ~/.nanorc
