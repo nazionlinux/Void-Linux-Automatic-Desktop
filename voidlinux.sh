@@ -43,11 +43,6 @@ clear
 echo "Installazione XORG & NETWORK MANAGER..."
 sleep 3s
 	sudo xbps-install -Sy nano xorg-minimal xterm xcalc fonts-roboto-ttf ipafont-fonts-otf xf86-input-synaptics NetworkManager network-manager-applet dnsmasq
-	cd ~ && wget -c https://raw.githubusercontent.com/nazionlinux/nanorc/main/.nanorc
-	#sudo sed '/*.nanorc/s/^#//' -i /etc/nanorc
-	sudo cp ~/.nanorc /etc/nanorc
-	#sed '/*.nanorc/s/^#//' -i ~/.nanorc
-	sudo echo -e "nameserver 1.1.1.1\nnameserver 1.0.0.1" > /etc/resolvdnsmasq.conf
 
 clear
 
@@ -86,6 +81,18 @@ sleep 3s
 	sudo xbps-install -Sy void-repo-nonfree
 	sudo xbps-install -Syuv
 	sudo xbps-install -Sy unrar
+
+clear
+
+echo "Ottimizzazioni..."
+sleep 3s
+	
+	cd ~ && wget -c https://github.com/nazionlinux/bashrc/blob/master/.bashrc
+	cd ~ && wget -c https://raw.githubusercontent.com/nazionlinux/nanorc/main/.nanorc
+	sudo cp ~/.bashrc /root/.bashrc
+	sudo cp ~/.nanorc /etc/nanorc
+
+	#sudo echo -e "nameserver 1.1.1.1\nnameserver 1.0.0.1" > /etc/resolvdnsmasq.conf
 
 clear
 
