@@ -91,8 +91,8 @@ sleep 3s
 	cd ~ && wget -c https://raw.githubusercontent.com/nazionlinux/nanorc/main/.nanorc
 	sudo cp ~/.bashrc /root/.bashrc
 	sudo cp ~/.nanorc /etc/nanorc
-
-	#sudo echo -e "nameserver 1.1.1.1\nnameserver 1.0.0.1" > /etc/resolvdnsmasq.conf
+	sudo sed '/name_servers/s/^#//' -i /etc/resolvconf.conf
+	sudo echo -e "nameserver 1.1.1.1\nnameserver 1.0.0.1" > /etc/resolvdnsmasq.conf
 
 clear
 
