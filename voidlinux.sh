@@ -86,12 +86,15 @@ clear
 
 echo "Ottimizzazioni..."
 sleep 3s
-	
 	cd ~ && wget -c https://github.com/nazionlinux/bashrc/blob/master/.bashrc
 	cd ~ && wget -c https://raw.githubusercontent.com/nazionlinux/nanorc/main/.nanorc
 	sudo cp ~/.bashrc /root/.bashrc
 	sudo cp ~/.nanorc /etc/nanorc
+	sudo sed '/listen-address=/s/^#//' -i /etc/dnsmasq.conf
+	sudo sed '/resolv-file=/s/^#//' -i /etc/dnsmasq.conf
 	sudo sed '/name_servers/s/^#//' -i /etc/resolvconf.conf
+	sudo sed '/listen-address=/s/$/127.0.0.1/' -i /etc/dnsmasq.conf
+	sudo sed '/resolv-file=/s/$/\/etc\/resolvdnsmasq.conf/' -i /etc/dnsmasq.conf
 	sudo echo -e "nameserver 1.1.1.1\nnameserver 1.0.0.1" > /etc/resolvdnsmasq.conf
 
 clear
