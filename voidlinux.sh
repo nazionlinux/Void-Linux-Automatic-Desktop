@@ -86,7 +86,7 @@ clear
 
 echo "Ottimizzazioni..."
 sleep 3s
-	cd ~ && wget -c https://github.com/nazionlinux/bashrc/blob/master/.bashrc
+	cd ~ && wget -c https://raw.githubusercontent.com/nazionlinux/bashrc/master/.bashrc
 	cd ~ && wget -c https://raw.githubusercontent.com/nazionlinux/nanorc/main/.nanorc
 	sudo cp ~/.bashrc /root/.bashrc
 	sudo cp ~/.nanorc /etc/nanorc
