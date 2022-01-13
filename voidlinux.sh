@@ -103,6 +103,7 @@ echo "Configurazione servizi..."
 sleep 10s
 	sudo ln -s /etc/sv/dbus /var/service/
 	sudo ln -s /etc/sv/elogind /var/service/
+	sudo ln -s /etc/sv/dnsmasq /var/service/
 	sudo ln -s /etc/sv/NetworkManager /var/service/
 	sudo ln -s /etc/sv/pipewire /var/service/
 	sudo ln -s /etc/sv/lightdm /var/service/
