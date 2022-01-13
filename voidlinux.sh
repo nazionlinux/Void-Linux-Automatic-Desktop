@@ -64,6 +64,12 @@ sleep 3s
 
 clear
 
+echo "Installazione programmi video..."
+sleep 3s
+	sudo xbps-install -Sy ffmpeg ffmpegthumbnailer
+
+clear
+
 echo "Installazione programmi grafica..."
 sleep 3s
 	sudo xbps-install -Sy gimp feh gcolor2 lximage-qt
