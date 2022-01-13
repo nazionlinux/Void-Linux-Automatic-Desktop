@@ -54,7 +54,7 @@ clear
 
 echo "Installazione LIGHTDM & XFCE..."
 sleep 3s
-	sudo xbps-install -Sy lightdm lightdm-gtk3-greeter elogind sakura xfce4-panel xfce4-settings xfce4-session xfwm4 xfdesktop xfce4-alsa-plugin breeze-icons
+	sudo xbps-install -Sy lightdm lightdm-gtk3-greeter elogind sakura xfce4-panel xfce4-settings xfce4-session xfwm4 xfdesktop xfce4-alsa-plugin tumbler breeze-icons
 
 clear
 
