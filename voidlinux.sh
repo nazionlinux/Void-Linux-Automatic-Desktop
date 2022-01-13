@@ -21,15 +21,15 @@ sleep 3s
 
 clear
 
-echo "Aggiornamento XBPS..."
-sleep 3s
-	sudo xbps-install -u xbps
-
-clear
-
 echo "Aggiornamento VOID LINUX..."
 sleep 3s
 	sudo xbps-install -Syu
+
+clear
+
+echo "Aggiornamento XBPS..."
+sleep 3s
+	sudo xbps-install -u xbps
 
 clear
 
