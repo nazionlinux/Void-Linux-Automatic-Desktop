@@ -78,7 +78,7 @@ clear
 
 echo "Installazione programmi utilità..."
 sleep 3s
-	sudo xbps-install -Sy atom aria2 file-roller p7zip ldm whois testdisk filezilla leafpad gparted gvfs
+	sudo xbps-install -Sy atom aria2 file-roller p7zip ldm whois testdisk filezilla leafpad gparted gvfs qarma
 
 clear
 
